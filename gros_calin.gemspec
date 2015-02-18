@@ -32,5 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rb-readline', '~> 0.5', '>= 0.5.0'
   spec.add_development_dependency 'guard', '~> 2.11', '>= 2.11.1'
   spec.add_development_dependency 'guard-minitest', '~> 2.3', '>= 2.3.2'
+
+  spec.add_development_dependency 'mysql2', '~> 0.3', '>= 0.3.18'
   spec.add_development_dependency 'moped', '~> 2.0', '>= 2.0.3'
 end
