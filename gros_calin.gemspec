@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = GrosCalin::VERSION
   spec.authors       = ["Jef Mathiot"]
   spec.email         = ["jeff.mathiot@gmail.com"]
-  spec.summary       = %q{Share database queries using HTTP}
-  spec.description   = %q{Share database queries using HTTP}
+  spec.summary       = %q{Make database queries available via HTTP}
+  spec.description   = %q{Make database queries available via HTTP}
   spec.homepage      = "https://github.com/servebox/gros_calin"
   spec.license       = "MIT"
 
@@ -34,5 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'sinatra', '~> 1.4', '>= 1.4.5'
   spec.add_dependency 'sinatra-contrib', '~> 1.4', '>= 1.4.2'
   spec.add_dependency 'rack', '~> 1.6', '>= 1.6.0'
+  spec.add_dependency 'thin', '~> 1.6', '>= 1.6.3'
+  spec.add_dependency 'thor', '~> 0.19', '>= 0.19.1'
 
 end
