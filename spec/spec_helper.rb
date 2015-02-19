@@ -17,3 +17,5 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'minitest-implicit-subject'
 require 'mocha/setup'
+
+GrosCalin::Application.set :raise_errors, false
