@@ -6,42 +6,13 @@ module GrosCalin
 
     class MongoDB
       include Driver
+
       register 'mongodb'
 
-      ALLOWED_METHODS=[
-        'find',
-        'count',
-        'aggregate',
-        'limit',
-        'skip',
-        'sort',
-        'distinct',
-        'select',
-        'first',
-        'one'
-      ].freeze
-
-      def query(id, spec)
-        collection = mandatory(spec, 'collection')
-        query = mandatory(spec, 'query')
+      def query(id, js)
         with_session do |session|
-          results = session[collection]
-          whitelist(query).each do |method_descriptor|
-            if method_descriptor.is_a?(Hash)
-              method = method_descriptor.keys.first
-              args = method_descriptor[method]
-              results = results.send(method, args)
-            else
-              results = results.send(method_descriptor)
-            end
-          end
-          if results.is_a?(Hash)
-            results
-          elsif results.respond_to?(:to_a)
-            results.to_a
-          else
-            { id => results }
-          end
+          cmd = {'$eval' => "function(){ return #{js}; }", nolock: true}
+          session.command(cmd)['retval']
         end
       end
 
