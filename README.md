@@ -1,6 +1,12 @@
 # GrosCalin
+# Gros Câlin
 
-TODO: Write a gem description
+Share database queries via HTTP.
+
+[![Build Status](https://travis-ci.org/servebox/gros_calin.png)](https://travis-ci.org/servebox/gros_calin)
+[![Dependency Status](https://gemnasium.com/servebox/gros_calin.png)](https://gemnasium.com/servebox/gros_calin)
+[![Coverage Status](https://coveralls.io/repos/servebox/gros_calin/badge.png)](https://coveralls.io/r/servebox/gros_calin)
+[![Code Climate](https://codeclimate.com/github/servebox/gros_calin.png)](https://codeclimate.com/github/servebox/gros_calin)
 
 ## Installation
 
