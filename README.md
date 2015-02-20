@@ -15,7 +15,7 @@ Install the gem:
 
 Depending on the drivers you'd like to use to connect your databases, you'll
 also have to install one or more of the following gems (see the
-_Available Drivers_ section below):
+_Available drivers_ section below):
 
 * mysql2 (MySQL)
 * moped (MongoDB)
@@ -57,7 +57,7 @@ queries you'd like to give a hug.
 * List available hugs for a datasource: `http://localhost:3313/<datasource>`
 * Query a specific hug: `http://localhost:3313/<datasource>/<hug>`
 
-### Example usage
+### Available drivers
 
 #### MySQL
 
@@ -76,7 +76,7 @@ myapp_datasource:
 
 See the [mysql2](https://github.com/brianmario/mysql2) client for a list
 of [available connection
-options](https://github.com/brianmario/mysql2#connection-options)).
+options](https://github.com/brianmario/mysql2#connection-options).
 
 #### MongoDB
 
