@@ -22,7 +22,7 @@ _Available drivers_ section below):
 
 ## Usage
 
-Create a configuration file (see the _Configuration Section_ below), then start
+Create a configuration file (see the _Configuration_ section below), then start
 the server:
 
     $ gros_calin
@@ -82,7 +82,7 @@ options](https://github.com/brianmario/mysql2#connection-options).
 
 ```yaml
 projects_datasource:
-  driver: "mysql"
+  driver: "mongodb"
   options:
     hosts:
       - replset1.example.com:27017
