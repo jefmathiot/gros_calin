@@ -90,7 +90,6 @@ projects_datasource:
       - replset3.example.com:27017
     username: "operator"
     password: "secret"
-    database: "projects"
   hugs:
     issues: "db.projects.find( { score: { $lt: 3.8 } } ).sort(score: -1).toArray()"
     status: "{ failures: db.projects.find( { status: 'failed' } ).count(), success: db.projects.find( { status: 'success' } ).count() }"
