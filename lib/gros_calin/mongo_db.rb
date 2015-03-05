@@ -41,7 +41,7 @@ module GrosCalin
 
     end
 
-  rescue
+  rescue LoadError
     puts "Unable to find the moped gem, driver for MongoDB won't load."
   end
 

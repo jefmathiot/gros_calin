@@ -13,7 +13,7 @@ module GrosCalin
       end
     end
 
-  rescue
+  rescue LoadError
     puts "Unable to find the mysql2 gem, driver for MySQL won't load."
   end
 
