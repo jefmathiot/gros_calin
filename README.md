@@ -70,7 +70,7 @@ myapp_datasource:
     password: "secret"
     database: "myapp"
     hugs:
-      sign_ups: "SELECT count(id) AS sign_ups, country_code FROM users WHERE created_at DATE_SUB( NOW(), INTERVAL 24 HOUR) GROUP by country_code;"
+      sign_ups: "SELECT count(id) AS sign_ups, country_code FROM users WHERE created_at > DATE_SUB( NOW(), INTERVAL 24 HOUR) GROUP by country_code;"
 # another_datasource:
 ```
 
