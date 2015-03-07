@@ -27,18 +27,6 @@ module GrosCalin
         yield session
       end
 
-      def mandatory(options, attr)
-        raise "\"#{attr}\" has not been specified" unless options[attr]
-        options[attr]
-      end
-
-      def whitelist(query)
-        query.select{|descriptor|
-          name = descriptor.is_a?(Hash) && descriptor.keys.first || descriptor
-          ALLOWED_METHODS.include?(name)
-        }
-      end
-
     end
 
   rescue LoadError
